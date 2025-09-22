@@ -12,14 +12,6 @@ html, body{
     width:  100vw;
     height: 100vh;
 }
-.elfsight-app-overlay {
-  pointer-events: none !important;
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
-  overflow: hidden !important;
-}
 ::-webkit-scrollbar{
     display: none;
 }
@@ -449,6 +441,11 @@ section .fundo{
 }
 code{
     display: none;
+}
+#codigo{
+    padding: 10px;
+    background-color: var(--color4);
+    color: white;
 }
 
 
