@@ -442,7 +442,7 @@ section .fundo{
 code{
     display: none;
 }
-#codigo{
+#botaoCopiar{
     padding: 10px;
     background-color: var(--color4);
     color: white;
