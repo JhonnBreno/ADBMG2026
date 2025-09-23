@@ -64,27 +64,6 @@ const lista = document.querySelectorAll('#search-list li');
     })
     
 
-    // Espera até que o DOM esteja pronto
-    const botao = document.getElementById("botaoCopiar");
-
-    if (botao) {
-      botao.addEventListener("click", function () {
-        const codigo = document.getElementById("codigo").innerText;
-
-        // Usa a API moderna de clipboard
-        navigator.clipboard.writeText(codigo)
-          .then(() => {
-            alert("✅ Código copiado com sucesso!");
-          })
-          .catch(err => {
-            console.error("❌ Erro ao copiar:", err);
-          });
-      });
-    }
-
-
-
-
     const locais = document.getElementById('locais')
     const search = document.getElementById('search-input')
     locais.addEventListener('click', () =>{
@@ -97,4 +76,14 @@ const lista = document.querySelectorAll('#search-list li');
 
 
 })
+
+/*ofertas-------------------------------------------------------------------*/
+function copiarMensagem(selectElement) {
+    const mensagem = selectElement.value;
+    if (mensagem) {
+      navigator.clipboard.writeText(mensagem)
+        .then(() => alert("Mensagem copiada: " + mensagem))
+        .catch(err => alert("Erro ao copiar: " + err));
+    }
+  }
 

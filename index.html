@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="media.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
-        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script src="api.js" defer></script>
-        <script type="text/javascript">(function(){ emailjs.init({publicKey: "VjzMnQb4reUmn0m4z",});})();</script>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
+        <script src="api.js" async></script>
+        <script type="text/javascript" async>(function(){ emailjs.init({publicKey: "VjzMnQb4reUmn0m4z",});})();</script>
         <!-- CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -147,6 +147,7 @@
                     </ul>
                     </div>
                 </div>
+                
                 <div class="col-12 col-md-6 col-lg-3 mb-3 ">
                     <div class="card-body h-100 p-3 d-flex flex-column justify-content-center align-items-center">
                         <i class="bi bi-book-fill"></i></i><h2>Sabedoria da Palavra</h2>
@@ -167,56 +168,43 @@
         </div>
         </div>
         </div>
-        <div class="container-fluid p-5 mt-5 project">
-            <div class="row d-flex g-5 ">
-                <div class="col-12 col-md-6 d-flex flex-column mb-3 mt-3 project-background justify-content-center align-items-center">
-                    <h1><u>Projeto Neemias</u></h1>
-                    <p>Tenha conhecimento de nosso projeto e contribua através de doação para que o templo se torne realidade</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalId">Contribuir</button>
-                    </div>  
-                    <div class="col-12 col-md-6 d-flex flex-column align-items-center mb-3 justify-content-center mt-3">
-                        <video src="./imagens/neemias.mp4" controls loading = "lazy" poster="./imagens/poster-video.png">Seu navegador não suporta esse video</video>
-                        
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitleId">Faça sua doação</h5>
-                                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container-fluid"><img src="./imagens/qrcode.jpg" alt="qrcode">
-                                    <div class="modal-text">
-                                        <h2>Projeto Neemias - Construindo um Templo para o Senhor</h2>
-                                            <p>A construção de um templo é mais do que levantar paredes e um teto; é erguer um local sagrado onde vidas serão transformadas, onde a palavra de Deus será compartilhada, e onde corações encontrarão paz e renovação. 
-                                            O Projeto Neemias nasceu com esse propósito: construir um espaço onde nossa comunidade possa se reunir, crescer espiritualmente e fortalecer sua fé. Assim como Neemias dedicou sua vida à reconstrução dos muros de Jerusalém, nós também nos empenhamos em edificar um templo que será um refúgio para todos.
-                                            Essa jornada só será possível com a participação daqueles que acreditam que a obra de Deus deve prosperar. </p> <p>Cada contribuição, independentemente do valor, é um ato de fé e generosidade. A Bíblia nos ensina que <i>"cada um deve dar conforme o que decidiu no seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria"</i> (2 Coríntios 9:7). 
-                                            Quando você doa, você não apenas ajuda a erguer um templo físico, mas também semeia esperança, amor e acolhimento para todos que passarão por suas portas. Seu apoio é essencial para que esse sonho se torne realidade!
-                                            Se sente tocado a contribuir? Faça parte dessa missão. Juntos, podemos transformar vidas!</p>
-                                            
-                                        </div>
-                                                 <pre><code id="codigo">console.log("Olá, mundo!");</code></pre>
-                                                <button id="botaoCopiar">Copiar código</button>
-                                </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button"class="btn" data-bs-dismiss="modal">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container-fluid p-4 mt-5 mb-5 donates">
+            <div class="row d-flex">
+                <h1>Dizimos e ofertas</h1>
+                <div class="col-12 col-sm-6">
+                    <img src="./imagens/locais.jpg" alt="imagem">
+                    <label for="dizimos">Dízimos</label>
+                    <p>Os dízimos são feitos através da chave aleatória, copie e cole no seu App bancário</p>
+                    <select name="dizimos" id="dizimos"  id="dizimos" onchange="copiarMensagem(this)">
+                        <option value="" disabled selected>Selecione uma cidade</option>
+                        <option value="em manutenção">Morada Nova</option>
+                        <option value="em manutenção">limoeiro do norte</option>
+                        <option value="em manutenção">Russas</option>
+                    </select>
                 </div>
-            </div>
+                <div class="col-12 col-sm-6">
+                    <div class="col-12 ">
+                    <img src="./imagens/locais.jpg" alt="imagem">
+                    <label for="ofertas">Ofertas</label>
+                    <p>As ofertas são feitas através da chave aleatória, copie e cole no seu App bancário</p>
+                    <select name="ofertas" id="ofertas" onchange="copiarMensagem(this)">
+                        <option value="" disabled selected>Selecione uma cidade</option>
+                        <option value="em manutenção">Morada Nova</option>
+                        <option value="em manutenção">limoeiro do norte</option>
+                        <option value="em manutenção">Russas</option>
+                    </select>
+                </div>
+                </div>
+            
         </div>
+        </div>
+                    
             <div class="container-fluid flex-column pb-5 pt-5 fundo">
                 <h2>E-Books</h2>
                 <div class="row d-flex g-3">
                     <div class="col-12 col-md-4">
                         <div class="card h-100 elemento">
-                            <img src="./imagens/fundobiblia.jpg" alt="biblia" loading="lazy">
+                            <img src="./imagens/fundobiblia.webp" alt="biblia" loading="lazy">
                             <div class="card-body">
                             <h3>Biblia</h3>
                             <p class="card-text">Meditar nas Escrituras diariamente promove o crescimento espiritual e uma vida de oração mais profunda</p>
@@ -236,7 +224,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="card h-100 elemento">
-                            <img src="./imagens/jejum.jpg" alt="jejum" loading="lazy">
+                            <img src="./imagens/jejum.webp" alt="jejum" loading="lazy">
                             <div class="card-body">
                                 <h3>Jejum</h3>
                                 <p class="card-text">O jejum envolve abrir mão de algo, geralmente alimentos, para dedicar mais tempo e atenção a Deus.</p>
@@ -270,7 +258,7 @@
                     <h1>Assembléia de Deus no Brasil Ministério da Graça</h1>
                     <p>Nós temos como objetivo distribuir o reino dos céus através da palavra do Senhor a toda a criatura trazendo as boas novas de Jesus Cristo</p>
 
-                <form class="more" id="formulario">
+                <form onsubmit="this.reset()" class="more" id="formulario">
                     <h1>Contato</h1>
                     <input type="email" placeholder="Digite seu Email" id="email" required>
                     <textarea name="message" id="message" placeholder="digite sua MENSAGEM..." required></textarea>
@@ -282,7 +270,7 @@
                 <p>&copy; 2025 Assembleia de Deus Ministério da Graça. Todos os direitos reservados.</p>
             </div>
         </footer>
-        <script>
+        <script async>
             var modalId = document.getElementById('modalId');
         
             modalId.addEventListener('show.bs.modal', function (event) {
@@ -293,8 +281,8 @@
                 // Use above variables to manipulate the DOM
             });
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous" async></script>
 
         <script src="script.js" defer></script>
 </body>
